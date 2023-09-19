@@ -1,0 +1,25 @@
+No geral, o Django fornece uma maneira poderosa e flexível de trabalhar com templates HTML,
+com seu sistema de templates, é possível separar a lógica do backend da apresentação visual, permitindo um desenvolvimento mais eficiente e organizado de sistemas web.
+
+Aqui estão os principais recursos de como o Django trabalha com templates HTML:
+
+Herança de templates: O Django suporta herança de templates, onde você pode criar um template base que define o layout geral do sistema e, em seguida,
+estender esse template base em outros templates para adicionar conteúdo específico. Isso permite reutilizar código e manter uma estrutura consistente em todo o site.
+Para fazer isso, use a diretiva {% extends 'nome_do_template_base.html' %} no início do seu template.
+
+Blocos de conteúdo: Com a herança de templates, você pode definir blocos de conteúdo que podem ser substituídos nos templates “filhos”.
+Isso permite que você insira conteúdo dinâmico nos locais apropriados.
+Para definir um bloco de conteúdo, use a diretiva {% block nome_do_bloco %} {% endblock nome_do_bloco %}  no template base, e no template “filho”, use {% block nome_do_bloco %} {% endblock %}para substituir o conteúdo.
+
+Contexto: O Django fornece um contexto de template, que é um dicionário Python que contém variáveis e seus valores correspondentes.
+Essas variáveis podem ser passadas para o template através da view para que sejam usadas na renderização dinâmica do HTML.
+O contexto é preenchido com dados específicos de cada requisição. No template, você pode acessar essas variáveis usando a sintaxe {{ nome_da_variavel }}.
+
+Tags e lógica do lado do servidor: O Django possui uma linguagem de template chamada Django Template Language (DTL), que permite adicionar lógica do lado do servidor nos templates.
+As tags do DTL são delimitadas por {% ... %} e permitem a execução de loops, condicionais e outras operações.
+
+Formulários: O Django possui um sistema poderoso para lidar com formulários HTML.
+Ele oferece a capacidade de criar, validar e renderizar formulários facilmente no template. O framework lida com a validação de dados, exibição de mensagens de erro e persistência de dados do formulário.
+
+Internacionalização: O Django suporta internacionalização e localização de templates.
+Isso significa que você pode criar templates que exibem conteúdo traduzido ou formatado de acordo com a localidade do usuário.
